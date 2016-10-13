@@ -6,6 +6,8 @@
  
 using namespace std;
 double kotaArr[maxVal][maxVal];
+int kotaAsal,kotaTujuan;
+int nKota;
 
 //struct node
 typedef struct {
@@ -30,9 +32,10 @@ void adaRute(){
 	//}
 //-----
 
-void initMatrix(int jumKota){
-	for(int i=0;i<jumKota;i++){
-		for(int j=0;j<jumKota;j++){
+//void initMatrix(int jumKota){
+void initMatrix(){
+	for(int i=0;i<nKota;i++){
+		for(int j=0;j<nKota;j++){
 			kotaArr[i][j]=defaultVal;
 		}
 	}
@@ -54,7 +57,8 @@ void cetakMatrix(int jumKota){
 }
 
 // labeling kota
-void inputKota(int nKota){
+//void inputKota(int nKota){
+void inputKota(){
 	kotaNode kotaArr[nKota];
 	cout<<endl<<"------ input nama kota ------"<<endl;	
 	for(int i=0;i<nKota;i++){
@@ -91,38 +95,48 @@ void getKotaIndex(string nmKota, int jmlKota){
 void inputRute(){
 	int kota1, kota2;
 	double jarak;
-
+	kotaNode kotaArr[nKota];
+	
 	cout<<endl<<"------ input rute ------"<<endl;	
 	for(int i=0; i<maxVal; i++){
 		cout<<"> rute ke-"<<i+1<<" (asal/tujuan/jarak):";
 		cin>>kota1>>kota2>>jarak;
 		
 		// lanjut / tidak
-		if(kota1==0 && kota2==0 && jarak==0.0)break;
-		else kotaArr[kota1][kota2]=jarak;
+		if(kota1==0 && kota2==0 && jarak==0.0)
+			break;
+		else 
+			kotaArr[kota1][kota2]=jarak;
 	}
 }
 
 //void tempParent(kotaRute *parentKota, kotaNode *pernahLewat){
-//void cekJarak(int kotaAsal,intkota){
-//    int minDistance = defaultVal;
-//    int kotaTerdekat;
+//void jelajahKota(int kotaAsal,int kotaTujuan){
+//    kotaNode kotaArr[nKota];
+//	
+//	//	set pernah lewat kota awal
+//	kotaArr[kotaAsal].pernahLewat=true;
+//	int kotaTerdekat;
+//    cout<<kotaAsal<<" - "<<kotaTujuan;
 //    for(int i=0;i<nKota;i++) {
-////        if((!mark[i]) && ( minDistance >= distance[i])) {
-//        if((!pernahLewat[i]) && ( minDistance >= distance[i])) {
-//            minDistance = distance[i];
-//            kotaTerdekat = i;
-//        }
-//    }return closestUnmarkedNode;
+// 		if(kotaArr[i].pernahLewat==false && (kotaArr[i].)){
+//			
+//		}
+//    }return kotaTerdekat;
 //}
 
-int kotaAsal,kotaTujuan;
-int nKota;
+void cekKotaTerdekat(){
+//	for(int i=0;i<){
+//		
+//	}
+}
+
 int main(){
 	cout<<"jumlah kota : ";
 	cin>>nKota;
-	initMatrix(nKota);
-	inputKota(nKota);
+	initMatrix();
+//	inputKota(nKota);
+	inputKota();
 	inputRute();	
 	cetakMatrix(nKota);
 
@@ -137,13 +151,12 @@ int main(){
 	cin>>kotaTujuan;
 	cout<<endl;
 	
-//	cekJarak(kotaAsal,kotaTujuan);
+	jelajahKota(kotaAsal,kotaTujuan);
 //	cout<<"kota asal :"<<kotaAsal;
 	
 	
 //	cout<<"masukkan kota tujuan :";cin>>kotaAsal<<endl;
 	return 0;
-
 			
 //	tempParent();	
 }
