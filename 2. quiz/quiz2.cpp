@@ -6,18 +6,19 @@ int main(){
 	cin>>bil;
 
 	for(int i=1;i<=(2*bil-1);i++ ){ // 1
-		if(i<=bil){
+		if(i<=bil){ // naik 
 			for(int j=1;j<=bil-i;j++ ){ // 
-				cout<<"-";
+				cout<<" ";
 			}
 			for(int k=1;k<=i-1;k++ ){ //cetak *
-				cout<<"*-"; 
+				cout<<"* "; 
 			}cout<<"*"<<endl;	
-		}else{
-			for(int a=bil-i;a>1;a--){
-				cout<<"*-";
-			}for(int b=i-1;b>1;b--){
-				cout<<"-";
+		}else{ // turun
+			for(int a=i-bil;a>=1;a--){ // -
+				cout<<" ";
+			// }for(int b=i-1;b>=1;b--){
+			}for(int b=i-1;b>=1;b--){ //*
+				cout<<"*";
 			}cout<<endl;
 		}
 	}return 0;

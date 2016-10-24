@@ -1,13 +1,18 @@
 #include <iostream> 
+
 int main(){
 	int bil;
 	cout<<"masukkan bil:";
 	cin>>bil;
-	int counter=0;
+
+	int x=0;
 	for (int i = 0; i<=bil; i++){
-		for (int j = 0; j<i+1; j++){
-			if(j==10) cout<<9;
-			else cout<<j;
+		for (int j = 0; j<i; j++){
+			if(x==10) {
+				x=0;
+				cout<<x <<" ";
+			}else cout<<x<<" ";
+			x++;
 		}cout<<endl;
 	}
 	return 0;
