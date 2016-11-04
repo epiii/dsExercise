@@ -1,0 +1,22 @@
+file header : 
+- iostream :
+	- cin
+	- cout
+	- endl
+	- ends
+- conio 
+	- getch
+	- clrscr
+	- putch : tampilkan ascii tanpa pindah cursor
+- stdio
+	- printf
+	- scanf
+	- gets : baca input spasi
+	- struct 
+- stdlib
+	- atof : string to double
+	- atoi : string to int
+	- pow : pangkat
+	- malloc : memory allocatio
+
+http://www.zhulachmad.net/2015/03/macam-macam-file-header-pada-c-dan.html

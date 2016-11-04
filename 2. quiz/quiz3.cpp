@@ -10,12 +10,11 @@ int main(){
 		for (int j = 0; j<i; j++){
 			if(x==10) {
 				x=0;
-				cout<<x <<" ";
+				cout<<x<<" ";
 			}else cout<<x<<" ";
 			x++;
 		}cout<<endl;
-	}
-	return 0;
+	}return 0;
 }
 
 /*
