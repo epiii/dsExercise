@@ -76,7 +76,7 @@ node *deleteNode(node *tree, int key){ // key : yg akan dihapus,tree : tree kese
     // 2 : node beranak 2 (2 tingkat) 
         node* temp = minValueNode(tree->right); // anak kanan yg paling kecil (smallest successor)
         tree->data = temp->data; // set node ke variable temporary  
-        tree->right = deleteNode(tree->right, temp->data); // Delete the inorder successor
+        tree->right = deleteNode(tree->right, temp->data); // hapus anak kanan 
     }return tree;
 }
 
